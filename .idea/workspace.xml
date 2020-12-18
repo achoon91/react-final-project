@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f611255-18a5-4527-b36d-ce8bf7d31265" name="Default Changelist" comment="1111">
+    <list default="true" id="8f611255-18a5-4527-b36d-ce8bf7d31265" name="Default Changelist" comment="2222">
+      <change afterPath="$PROJECT_DIR$/src/components/ChefDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Movie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/News.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recipe-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Chef.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chef.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608183351142</updated>
       <workItem from="1608183352279" duration="7893000" />
-      <workItem from="1608248149932" duration="13532000" />
+      <workItem from="1608248149932" duration="20015000" />
     </task>
     <task id="LOCAL-00001" summary="1111">
       <created>1608189729640</created>
@@ -92,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608261248420</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2222">
+      <created>1608262299288</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608262299288</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +123,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1111" />
-    <option name="LAST_COMMIT_MESSAGE" value="1111" />
+    <MESSAGE value="2222" />
+    <option name="LAST_COMMIT_MESSAGE" value="2222" />
   </component>
 </project>

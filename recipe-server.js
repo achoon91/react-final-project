@@ -100,6 +100,22 @@ app.get('/chef',function (request,response){
         })
     })
 })
+app.get('/chef_detail',function (reqeust,response){
+    // chef명을 받는다 => recipe에서 데이터를 찾는다
+    let chef=reqeust.query.chef
+    let url="mongodb://localhost:27017"
+    Client.connect(url,(err,client)=>{
+        let db=client.db("mydb")
+        db.collection('recipe').find({"chef":chef}).limit(20).toArray((err,docs)=>{
+            response.json(docs)
+            console.log(docs)
+            client.close()
+        })
+    })
+})
+// 영화
+// 네이버 뉴스
+
 
 
 

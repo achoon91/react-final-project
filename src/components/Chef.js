@@ -1,6 +1,7 @@
 import {fetchChefList} from '../actions/recipeActions'
 import {useDispatch,useSelector} from "react-redux";
 import React, {useEffect,useState} from 'react'
+import {NavLink} from "react-router-dom";
 
 export default function Chef(props){
     // 전송 => dispatch()=>reducer=>store => store저장된 state => yseSelector
@@ -19,11 +20,19 @@ export default function Chef(props){
         dispatch(fetchChefList(page))
     }
     const chef_data=useSelector((state)=>state.recipes.chef)
+    /*
+        <NavLink to={"/chef/detail/"+m.chef}>
+        => /chef/detail?chef=aaa
+        => /chef/detail/aaa/1
+        => 스프링 : PathValiable
+     */
     const html=chef_data.map((m)=>
        <table className={"table"}>
            <tr>
                <td width={"30%"} rowSpan={"2"}>
-                   <img src={m.poster} width={"150"} height={"80"}/>
+                   <NavLink to={"/chef/detail/"+m.chef}>
+                     <img src={m.poster} width={"150"} height={"80"}/>
+                   </NavLink>
                </td>
                <td colSpan={"4"} style={{"color":"orange"}}>
                    <h3>{m.chef}</h3>
