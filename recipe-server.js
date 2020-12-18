@@ -56,7 +56,7 @@ app.all('/*', function(req, res, next) {
 app.get("/recipe",(request,response)=>{
     let page=request.query.page
     // String page=request.getParameter("page")  => ?page=1
-    let rowSize=20
+    let rowSize=12
     let skip=(page*rowSize)-rowSize
     // 몽고비디에서 데이터 얻기
     // 1. 연결
@@ -88,7 +88,7 @@ app.get("/recipe",(request,response)=>{
 app.get('/chef',function (request,response){
     // page변수 받기
     let page=request.query.page
-    let rowSize=20
+    let rowSize=10
     let skip=(page*rowSize)-rowSize
     let url="mongodb://localhost:27017"
     Client.connect(url,(err,client)=>{
