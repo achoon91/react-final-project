@@ -1,4 +1,6 @@
 import React,{Component} from 'react'
+import {NavLink} from "react-router-dom";
+
 /*
       JSP : Model1 방식
             =========== 1. 보안의 허점
@@ -16,32 +18,32 @@ import React,{Component} from 'react'
       React (View:화면 출력)
       Redux (데이터 관리)
  */
-class Home extends Component{
+class Header extends Component{
     // HTML을 저장 => JSX (JavaScript+XML)
     render() {
         return (
             <nav className="navbar navbar-inverse">
                 <div className="container-fluid">
                     <div className="navbar-header">
-                        <a className="navbar-brand" href="#">SIST 포털</a>
+                        <NavLink className="navbar-brand" to="/">SIST 포털</NavLink>
                     </div>
                     <ul className="nav navbar-nav">
-                        <li className="active"><a href="#">Home</a></li>
+                        <li className="active"><NavLink to="/">Home</NavLink></li>
                         <li className="dropdown">
                             <a className="dropdown-toggle" data-toggle="dropdown" href="#">레시피
                                 <span className="caret"></span></a>
                             <ul className="dropdown-menu">
-                                <li><a href="#">레시피 목록</a></li>
-                                <li><a href="#">쉐프 목록</a></li>
-                                <li><a href="#">레시피 뉴스</a></li>
+                                <li><NavLink to="/recipe_list">레시피 목록</NavLink></li>
+                                <li><NavLink to="/chef_list">쉐프 목록</NavLink></li>
+                                <li><NavLink to="/news_list">레시피 뉴스</NavLink></li>
                             </ul>
                         </li>
-                        <li><a href="#">영화 목록</a></li>
-                        <li><a href="#">뮤직 목록</a></li>
+                        <li><NavLink to="/movie_list">영화 목록</NavLink></li>
+                        <li><NavLink to="/music_list">뮤직 목록</NavLink></li>
                     </ul>
                 </div>
             </nav>
         )
     }
 }
-export default Home
+export default Header

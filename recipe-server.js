@@ -53,7 +53,7 @@ app.all('/*', function(req, res, next) {
 });
 // Recipe 목록 출력 => 몽고디비 연결
 // app.get("/" => @RequestMapping
-app.get("/",(request,response)=>{
+app.get("/recipe",(request,response)=>{
     let page=request.query.page
     // String page=request.getParameter("page")  => ?page=1
     let rowSize=20
@@ -80,6 +80,22 @@ app.get("/",(request,response)=>{
         db.collection('recipe').find({}).skip(skip).limit(rowSize).toArray(function(err,docs){
             console.log(docs)
             response.json(docs)
+            client.close()
+        })
+    })
+})
+
+app.get('/chef',function (request,response){
+    // page변수 받기
+    let page=request.query.page
+    let rowSize=20
+    let skip=(page*rowSize)-rowSize
+    let url="mongodb://localhost:27017"
+    Client.connect(url,(err,client)=>{
+        let db=client.db('mydb')
+        db.collection('chef').find({}).skip(skip).limit(rowSize).toArray(function(err,docs){
+            response.json(docs)
+            console.log(docs)
             client.close()
         })
     })
